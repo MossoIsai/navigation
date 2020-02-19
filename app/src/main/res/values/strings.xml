@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">navigation</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="label_btn_transaction">Transaction</string>
+    <string name="label_btn_choose_recipient">Recipient</string>
+    <string name="label_btn_balance">Balance</string>
+</resources>

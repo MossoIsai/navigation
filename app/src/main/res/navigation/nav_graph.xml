@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentMain"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/fragmentTransaction"
+        android:name="com.mosso.navigation.FragmentTransaction"
+        android:label="fragment_fragment_transaction"
+        tools:layout="@layout/fragment_transaction" />
+    <fragment
+        android:id="@+id/fragmentChooiseRecipient"
+        android:name="com.mosso.navigation.FragmentChooseRecipient"
+        android:label="fragment_fragment_chooise_recipient"
+        tools:layout="@layout/fragment_chooise_recipient">
+        <action
+            android:id="@+id/action_fragmentChooiseRecipient_to_fragmentSpicifyAmount"
+            app:destination="@id/fragmentSpicifyAmount" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBalance"
+        android:name="com.mosso.navigation.FragmentBalance"
+        android:label="fragment_fragment_balance"
+        tools:layout="@layout/fragment_balance" />
+    <fragment
+        android:id="@+id/fragmentSpicifyAmount"
+        android:name="com.mosso.navigation.FragmentSpicifyAmount"
+        android:label="fragment_fragment_spicify_amount"
+        tools:layout="@layout/fragment_spicify_amount">
+        <action
+            android:id="@+id/action_fragmentSpicifyAmount_to_fragmentConfirmatiom"
+            app:destination="@id/fragmentConfirmatiom" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.mosso.navigation.FragmentMain"
+        android:label="fragment_fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/goToTransaction"
+            app:destination="@id/fragmentTransaction" />
+        <action
+            android:id="@+id/goToChooseRecipient"
+            app:destination="@id/fragmentChooiseRecipient" />
+        <action
+            android:id="@+id/goToBalance"
+            app:destination="@id/fragmentBalance" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentConfirmatiom"
+        android:name="com.mosso.navigation.FragmentConfirmatiom"
+        android:label="fragment_confirmatiom"
+        tools:layout="@layout/fragment_confirmatiom" />
+</navigation>
